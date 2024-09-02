@@ -15,13 +15,15 @@ const Navbar = () => {
                             role="navigation"
                         >
                             {/*      <!-- Brand logo --> */}
-                            <div className="uppercase  font-semibold flex items-center gap-2 whitespace-nowrap py-3 text-[22px] focus:outline-none lg:flex-1" >
-                                <img width="80" height="80" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/100/external-defence-martial-arts-flaticons-lineal-color-flat-icons.png" alt="external-defence-martial-arts-flaticons-lineal-color-flat-icons" />
-                                <div className=" ">
-                                    <h1 className="leading-tight tracking-tighter">Stand Against <span className="text-red-700 font-bold leading-tight tracking-tighter">Inhumanity</span></h1>
-                                    <h1 className="text-[11px] ">Empowering youth for better <span className="text-green-600">Ban</span><span className="text-red-600">glad</span><span className="text-green-600">desh</span></h1>
+                            <Link to='/'>
+                                <div className="uppercase  font-semibold flex items-center gap-2 whitespace-nowrap py-3 text-[22px] focus:outline-none lg:flex-1" >
+                                    <img width="80" height="80" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/100/external-defence-martial-arts-flaticons-lineal-color-flat-icons.png" alt="external-defence-martial-arts-flaticons-lineal-color-flat-icons" />
+                                    <div className=" ">
+                                        <h1 className="leading-tight tracking-tighter">Stand Against <span className="text-red-700 font-bold leading-tight tracking-tighter">Inhumanity</span></h1>
+                                        <h1 className="text-[11px] ">Empowering youth for better <span className="text-green-600">Ban</span><span className="text-red-600">glad</span><span className="text-green-600">desh</span></h1>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
 
                             {/*      <!-- Mobile trigger --> */}
                             <button
@@ -77,26 +79,25 @@ const Navbar = () => {
                                     </Link>
                                 </li>
                                 <li role="none" className="flex items-stretch">
-                                    <a
-                                        role="menuitem"
-                                        aria-current="page"
-                                        aria-haspopup="false"
-                                        className="flex items-center gap-2 py-4 text-emerald-500 transition-colors duration-300 hover:text-emerald-600 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
-                                        href="javascript:void(0)"
+                                    <a                    
+                                        className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
+                                        
                                     >
                                         <span>Planning</span>
                                     </a>
                                 </li>
-                                <li role="none" className="flex items-stretch">
+                                <Link to='/about' className="flex items-stretch">
+
                                     <a
                                         role="menuitem"
                                         aria-haspopup="false"
                                         className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                                         href="javascript:void(0)"
                                     >
-                                        <span>About me</span>
+                                        <span>About Us</span>
                                     </a>
-                                </li>
+
+                                </Link>
                             </ul>
                             <div className="ml-auto flex items-center px-6 lg:ml-0 lg:p-0">
                                 {/*        <!-- Avatar --> */}

@@ -32,6 +32,7 @@ export default {
         'banner':'url("https://i.pinimg.com/564x/60/cf/de/60cfde8844482439f775145c9f6b09b2.jpg")',
         'lines':'url("https://amity.keydesign.xyz/ngo/wp-content/uploads/sites/9/2024/04/shape-bg-3.svg")',
         'blood':'url("https://i.pinimg.com/564x/92/dc/f0/92dcf039a1dcd209441f5d74ad3e16ff.jpg")',
+        'revolution':'url("https://i.pinimg.com/564x/4d/fe/62/4dfe6229ef81a090745d2c1f3fbedd56.jpg")',
       },
       colors: {
         'theme-light': {
