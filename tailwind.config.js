@@ -31,6 +31,7 @@ export default {
         'newsletter':'url("https://i.pinimg.com/736x/c6/60/4c/c6604c027cf75975e69a33948bf974af.jpg")',
         'banner':'url("https://i.pinimg.com/564x/60/cf/de/60cfde8844482439f775145c9f6b09b2.jpg")',
         'lines':'url("https://amity.keydesign.xyz/ngo/wp-content/uploads/sites/9/2024/04/shape-bg-3.svg")',
+        'blood':'url("https://i.pinimg.com/564x/92/dc/f0/92dcf039a1dcd209441f5d74ad3e16ff.jpg")',
       },
       colors: {
         'theme-light': {
