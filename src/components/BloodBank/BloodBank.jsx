@@ -1,11 +1,10 @@
 import React from 'react';
+import BloodyBanner from './BloodyBanner';
 
 const BloodBank = () => {
     return (
         <div>
-            <div className='bg-blood bg-cover bg-no-repeat bg-gray-400 bg-blend-multiply bg-opacity-60 h-screen'>
-                 
-            </div>
+          <BloodyBanner></BloodyBanner>
         </div>
     );
 };
