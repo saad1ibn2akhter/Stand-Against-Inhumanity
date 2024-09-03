@@ -18,6 +18,7 @@ import Donate from './components/Donate/Donate.jsx';
 import Flood from './components/Donate/Flood.jsx';
 import Education from './components/Donate/Education.jsx';
 import MemberDetails from './components/TeamMembeers/MemberDetails.jsx';
+import Payment from './components/Donate/payment/Payment.jsx';
 
 
 const router = createBrowserRouter([
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       {
         path:'/donate',
         element:<Donate></Donate>
+      },
+      {
+        path:'/payment',
+        element:<Payment></Payment>
       },
       {
         path:'/member',
