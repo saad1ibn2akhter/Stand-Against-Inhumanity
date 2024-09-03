@@ -132,7 +132,7 @@ const About = () => {
                                 <div className="p-5">
                                     <h6 className="mb-2 font-semibold leading-5">They urge you</h6>
                                     <p className="text-sm text-gray-900">
-                                        A flower in my garden, a mystery in my panties. Heart attack
+                                        A flower in my garden, a mystery in  attack
                                         never stopped old Big Bear.
                                     </p>
                                 </div>
@@ -226,7 +226,7 @@ const About = () => {
                                 <div className="p-5">
                                     <h6 className="mb-2 font-semibold leading-5">They urge you</h6>
                                     <p className="text-sm text-gray-900">
-                                        A flower in my garden, a mystery in my panties. Heart attack
+                                        A flower in my garden, a mystery in art attack
                                         never stopped old Big Bear.
                                     </p>
                                 </div>

@@ -85,6 +85,13 @@ const Navbar = () => {
                                         <span>Volunteer</span>
                                     </Link>
                                 </li>
+                                <li role="none" className="flex items-stretch">
+                                    <Link
+                                        to={`/donate`}
+                                        className="flex items-center py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4">
+                                        <span>Donate</span>
+                                    </Link>
+                                </li>
                              
                                 <Link to='/about' className="flex items-stretch">
 

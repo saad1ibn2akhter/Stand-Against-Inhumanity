@@ -14,6 +14,9 @@ import DonateBlood from './components/BloodBank/DonateBlood.jsx';
 import NeedBlood from './components/BloodBank/NeedBlood.jsx';
 import DistrictDetails from './components/BloodBank/DynamicDistricts/DistrictDetails.jsx';
 import VolunteerRegistration from './components/Volunteer/VolunteerRegistration.jsx';
+import Donate from './components/Donate/Donate.jsx';
+import Flood from './components/Donate/Flood.jsx';
+import Education from './components/Donate/Education.jsx';
 
 
 const router = createBrowserRouter([
@@ -38,8 +41,20 @@ const router = createBrowserRouter([
         element:<NeedBlood></NeedBlood>
       },
       {
+        path:'/donate/flood',
+        element:<Flood></Flood>
+      },
+      {
+        path:'/donate/education',
+        element:<Education></Education>
+      },
+      {
         path:'/about',
         element:<About></About>
+      },
+      {
+        path:'/donate',
+        element:<Donate></Donate>
       },
       {
         path:'/volunteer',
