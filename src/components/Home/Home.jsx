@@ -7,6 +7,7 @@ import HeroSection from './HeroSection';
 import { Content } from './Content';
 import { Blog } from './Blog';
 import { Newsletter } from './Newsletter';
+import Testimonial from './Testimonial';
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             <Content></Content>
             <Blog></Blog>
             <Team></Team>
+            <Testimonial></Testimonial>
             <Newsletter></Newsletter>
         </div>
     );
