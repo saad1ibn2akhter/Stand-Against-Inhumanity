@@ -13,6 +13,8 @@ import About from './components/About/About.jsx';
 import DonateBlood from './components/BloodBank/DonateBlood.jsx';
 import NeedBlood from './components/BloodBank/NeedBlood.jsx';
 import DistrictDetails from './components/BloodBank/DynamicDistricts/DistrictDetails.jsx';
+import VolunteerRegistration from './components/Volunteer/VolunteerRegistration.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -38,6 +40,10 @@ const router = createBrowserRouter([
       {
         path:'/about',
         element:<About></About>
+      },
+      {
+        path:'/volunteer',
+        element:<VolunteerRegistration></VolunteerRegistration>
       },
       {
         path:`/bloodbank/needblood/:id`,
