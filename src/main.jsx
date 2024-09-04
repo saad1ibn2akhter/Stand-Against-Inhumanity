@@ -19,6 +19,7 @@ import Flood from './components/Donate/Flood.jsx';
 import Education from './components/Donate/Education.jsx';
 import MemberDetails from './components/TeamMembeers/MemberDetails.jsx';
 import Payment from './components/Donate/payment/Payment.jsx';
+import Dashboard from './Layout/Dashboard.jsx';
 
 
 const router = createBrowserRouter([
@@ -75,6 +76,12 @@ const router = createBrowserRouter([
         element:<DistrictDetails></DistrictDetails>,
         
       },
+      {
+        path:'/dashboard',
+        element:<Dashboard></Dashboard>,
+        children:[],
+      },
+
     ]
   },
 ]);

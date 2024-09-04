@@ -92,6 +92,13 @@ const Navbar = () => {
                                         <span>Donate</span>
                                     </Link>
                                 </li>
+                                <li role="none" className="flex items-stretch">
+                                    <Link
+                                        to={`/donate`}
+                                        className="flex items-center py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4">
+                                        <span>Donate</span>
+                                    </Link>
+                                </li>
                              
                                 <Link to='/about' className="flex items-stretch">
 
@@ -102,6 +109,18 @@ const Navbar = () => {
                                         href="javascript:void(0)"
                                     >
                                         <span>About Us</span>
+                                    </a>
+
+                                </Link>
+                                <Link to='/dashboard' className="flex items-stretch">
+
+                                    <a
+                                        role="menuitem"
+                                        aria-haspopup="false"
+                                        className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
+                                        href="javascript:void(0)"
+                                    >
+                                        <span>Dashboard</span>
                                     </a>
 
                                 </Link>

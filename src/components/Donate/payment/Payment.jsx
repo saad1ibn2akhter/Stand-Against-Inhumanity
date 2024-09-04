@@ -1,6 +1,29 @@
+import axios from 'axios';
 import React from 'react';
 
 const Payment = () => {
+
+    const handleCreatePayment = () => {
+        axios
+            .post('http://localhost:5000/create-payment', {
+                amount: 100,
+                currency: "USD"
+            })
+            .then(res => {
+                console.log('Payment created successfully:', res.data);
+                console.log(res);
+
+                const redirectUrl = res.data?.paymentUrl;
+
+                if(redirectUrl){
+                    window.location.replace(redirectUrl);
+                }
+            })
+            .catch(err => {
+                console.error('Error creating payment:', err);
+            });
+    };
+
     return (
         <div>
             <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
@@ -53,7 +76,23 @@ const Payment = () => {
                                     </div>
                                 </div>
 
-                                <button type="submit" class="flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4  focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Pay now</button>
+                                <button onClick={() => document.getElementById('my_modal_1').showModal()} type="submit" class="flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-black border-2 hover:bg-primary-800 focus:outline-none focus:ring-4  focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Pay now</button>
+                                <button onClick={handleCreatePayment} type="submit" class="flex w-full items-center mt-2 justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-black border-2 hover:bg-primary-800 focus:outline-none focus:ring-4  focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"><img className='w-[250px] p-0' src="https://sslcommerz.com/wp-content/uploads/2021/11/logo.png" alt="" /></button>
+
+
+                                <dialog id="my_modal_1" className="modal">
+                                    <div className="modal-box">
+                                        <h3 className="font-bold text-lg">Service Unavailable !!</h3>
+                                        <img width="100" height="100" src="https://img.icons8.com/clouds/100/cancel-2.png" alt="cancel-2" />
+                                        <p className="py-4">Card Payment gateway is not integrated with <span className='lowercase link link-secondary'>Stand-Against-Inhumanity.web.app</span></p>
+                                        <div className="modal-action">
+                                            <form method="dialog">
+                                                {/* if there is a button in form, it will close the modal */}
+                                                <button className="btn">Close</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </dialog>
                             </form>
 
                             <div class="mt-6 grow sm:mt-8 lg:mt-0">
@@ -98,8 +137,8 @@ const Payment = () => {
                         </div>
 
                         <p class="mt-6 text-center text-gray-500 dark:text-gray-400 sm:mt-8 lg:text-left">
-                            Payment processed by <a href="#" title="" class="font-medium text-primary-700 underline hover:no-underline dark:text-primary-500">Paddle</a> for <a href="#" title="" class="font-medium text-primary-700 underline hover:no-underline dark:text-primary-500">Flowbite LLC</a>
-                            - United States Of America
+                            Payment processed by <a href="#" title="" class="font-medium text-primary-700 underline hover:no-underline dark:text-primary-500">Paddle</a> for <a href="#" title="" class="font-medium text-primary-700 underline hover:no-underline dark:text-primary-500">Stand Against Inhumanity</a>
+                            - Bangladesh
                         </p>
                     </div>
                 </div>
