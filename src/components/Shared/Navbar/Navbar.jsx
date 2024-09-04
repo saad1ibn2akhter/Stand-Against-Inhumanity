@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [isToggleOpen, setIsToggleOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleDropdown = () => setIsOpen(!isOpen);
 
     return (
         <>
@@ -92,13 +95,7 @@ const Navbar = () => {
                                         <span>Donate</span>
                                     </Link>
                                 </li>
-                                <li role="none" className="flex items-stretch">
-                                    <Link
-                                        to={`/donate`}
-                                        className="flex items-center py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4">
-                                        <span>Donate</span>
-                                    </Link>
-                                </li>
+
 
                                 <Link to='/about' className="flex items-stretch">
 
@@ -117,13 +114,44 @@ const Navbar = () => {
                                     <a
                                         role="menuitem"
                                         aria-haspopup="false"
-                                        className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
+                                        className="flex items-center gap-2 py-4 transition-colors duration-300  hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                                         href="javascript:void(0)"
                                     >
                                         <span>Dashboard</span>
                                     </a>
 
                                 </Link>
+                                <li role="none" className="relative flex lg:translate-y-7">
+                                    <button
+                                        onClick={toggleDropdown}
+                                        className="flex btn btn-sm bg-green-100 text-green-500 items-center transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none lg:px-4"
+                                    >
+                                        Account
+                                    </button>
+                                    {isOpen && (
+                                        <ul className="absolute right-0 mt-2 w-[200px] p-3 bg-white border border-gray-300 rounded shadow-lg">
+                                            <li role="none" className="flex">
+                                          
+                                                <Link
+                                                    to={`/login`}
+                                                    className="flex btn w-full btn-sm text-green-500 items-center px-4 py-2 transition-colors duration-300 hover:bg-gray-100 focus:outline-none"
+                                                >
+                                                    
+                                                    <span>Login</span>
+                                                </Link>
+                                            </li>
+                                            <li role="none" className="flex">
+                                                <Link
+                                                    to={`/register`}
+                                                    className="flex w-full mt-2 btn btn-sm text-green-500 items-center px-4 py-2 transition-colors duration-300 hover:bg-gray-100 focus:outline-none"
+                                                >
+                                                    <span>Register</span>
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    )}
+                                </li>
+
                             </ul>
                             <div className="ml-auto flex items-center px-6 lg:ml-0 lg:p-0">
                                 {/*        <!-- Avatar --> */}
