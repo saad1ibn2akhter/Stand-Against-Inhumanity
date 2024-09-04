@@ -6,6 +6,7 @@ import React, { createContext, useEffect, useState } from 'react';
 
 export const AuthContext = createContext(null);
 import axios from "axios";
+import app from '../firebase/firebase.config';
 
 const auth = getAuth(app);
 
@@ -13,14 +14,16 @@ const AuthProvider = ({ children }) => {
 
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-    const axiosPublic = useAxiosPublic();
+    
 
     const googleAuth = new GoogleAuthProvider();
     const githubAuth = new GithubAuthProvider();
 
     const createuser = (email, password) => {
+
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
+
     }
     const updateAccount = (name, photo) => {
         setLoading(true);
@@ -50,7 +53,6 @@ const AuthProvider = ({ children }) => {
         return signInWithEmailAndPassword(auth, email, password);
     }
 
-  
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {

@@ -22,73 +22,79 @@ import Payment from './components/Donate/payment/Payment.jsx';
 import Dashboard from './Layout/Dashboard.jsx';
 import AdminHome from './components/Dashboard/AdminHome.jsx';
 import AllApplications from './components/Dashboard/AllApplications.jsx';
+import AuthProvider from './components/Authprovider/AuthProvider.jsx';
+import Register from './components/Authentication/Register.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    children:[
+    children: [
       {
-        path:'/',
-        element:<Home></Home>
+        path: '/',
+        element: <Home></Home>
       },
       {
-        path:'/bloodbank',
-        element:<BloodBank></BloodBank>
+        path: '/bloodbank',
+        element: <BloodBank></BloodBank>
       },
       {
-        path:'/bloodbank/donateblood',
-        element:<DonateBlood></DonateBlood>
+        path: '/bloodbank/donateblood',
+        element: <DonateBlood></DonateBlood>
       },
       {
-        path:'/bloodbank/needblood',
-        element:<NeedBlood></NeedBlood>
+        path: '/bloodbank/needblood',
+        element: <NeedBlood></NeedBlood>
       },
       {
-        path:'/donate/flood',
-        element:<Flood></Flood>
+        path: '/donate/flood',
+        element: <Flood></Flood>
       },
       {
-        path:'/donate/education',
-        element:<Education></Education>
+        path: '/donate/education',
+        element: <Education></Education>
       },
       {
-        path:'/about',
-        element:<About></About>
+        path: '/about',
+        element: <About></About>
       },
       {
-        path:'/donate',
-        element:<Donate></Donate>
+        path: '/donate',
+        element: <Donate></Donate>
       },
       {
-        path:'/payment',
-        element:<Payment></Payment>
+        path: '/payment',
+        element: <Payment></Payment>
       },
       {
-        path:'/member',
-        element:<MemberDetails></MemberDetails>
+        path: '/register',
+        element: <Register></Register>
       },
       {
-        path:'/volunteer',
-        element:<VolunteerRegistration></VolunteerRegistration>
+        path: '/member',
+        element: <MemberDetails></MemberDetails>
       },
       {
-        path:`/bloodbank/needblood/:id`,
-        element:<DistrictDetails></DistrictDetails>,
-        
+        path: '/volunteer',
+        element: <VolunteerRegistration></VolunteerRegistration>
       },
       {
-        path:'dashboard',
-        element:<Dashboard></Dashboard>,
-        children:[
+        path: `/bloodbank/needblood/:id`,
+        element: <DistrictDetails></DistrictDetails>,
+
+      },
+      {
+        path: 'dashboard',
+        element: <Dashboard></Dashboard>,
+        children: [
           {
-            path:'adminHome',
-            element:<AdminHome></AdminHome>
+            path: 'adminHome',
+            element: <AdminHome></AdminHome>
           },
           {
-            path:'allApplications',
-            element:<AllApplications></AllApplications>
+            path: 'allApplications',
+            element: <AllApplications></AllApplications>
           },
 
         ],
@@ -100,6 +106,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>,
 )
