@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
         <>
             <div className=" font-poppins top-0 sticky z-50 shadow-lg shadow-slate-700/5 bg-white/90 ">
-                <header className=" max-w-7xl mx-auto border-b-1 relative z-20 w-full border-b border-slate-200 bg-white/90  after:absolute after:left-0 after:top-full after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden">
+                <header className=" max-w-8xl mx-auto border-b-1 relative z-20 w-full border-b border-slate-200 bg-white/90  after:absolute after:left-0 after:top-full after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden">
                     <div className="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
                         <nav
                             aria-label="main navigation"
@@ -99,7 +99,7 @@ const Navbar = () => {
                                         <span>Donate</span>
                                     </Link>
                                 </li>
-                             
+
                                 <Link to='/about' className="flex items-stretch">
 
                                     <a

@@ -29,6 +29,7 @@ const VolunteerRegistration = () => {
             email: e.target.email.value,
             location: e.target.location.value,
             whatsapp: e.target.whatsapp.value,
+            photo: e.target.phone.value,
             status:'Pending'
         };
 
@@ -82,6 +83,16 @@ const VolunteerRegistration = () => {
                                         placeholder="Name"
                                         type="text"
                                         id="name"
+                                        required
+                                    />
+                                </div>
+                                <div>
+                                    <label className="sr-only" htmlFor="name">Name</label>
+                                    <input
+                                        className="w-full rounded-lg border border-gray-300 p-3 text-sm"
+                                        placeholder="Photo Link / url"
+                                        type="text"
+                                        id="photo"
                                         required
                                     />
                                 </div>

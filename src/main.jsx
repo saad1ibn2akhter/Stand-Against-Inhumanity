@@ -20,6 +20,8 @@ import Education from './components/Donate/Education.jsx';
 import MemberDetails from './components/TeamMembeers/MemberDetails.jsx';
 import Payment from './components/Donate/payment/Payment.jsx';
 import Dashboard from './Layout/Dashboard.jsx';
+import AdminHome from './components/Dashboard/AdminHome.jsx';
+import AllApplications from './components/Dashboard/AllApplications.jsx';
 
 
 const router = createBrowserRouter([
@@ -77,9 +79,19 @@ const router = createBrowserRouter([
         
       },
       {
-        path:'/dashboard',
+        path:'dashboard',
         element:<Dashboard></Dashboard>,
-        children:[],
+        children:[
+          {
+            path:'adminHome',
+            element:<AdminHome></AdminHome>
+          },
+          {
+            path:'allApplications',
+            element:<AllApplications></AllApplications>
+          },
+
+        ],
       },
 
     ]
