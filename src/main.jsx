@@ -24,6 +24,7 @@ import AdminHome from './components/Dashboard/AdminHome.jsx';
 import AllApplications from './components/Dashboard/AllApplications.jsx';
 import AuthProvider from './components/Authprovider/AuthProvider.jsx';
 import Register from './components/Authentication/Register.jsx';
+import Users from './components/Dashboard/Users.jsx';
 
 
 const router = createBrowserRouter([
@@ -95,6 +96,10 @@ const router = createBrowserRouter([
           {
             path: 'allApplications',
             element: <AllApplications></AllApplications>
+          },
+          {
+            path: 'users',
+            element: <Users></Users>
           },
 
         ],

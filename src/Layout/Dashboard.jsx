@@ -88,7 +88,7 @@ const Dashboard = () => {
                             </li>
                             <li>
                                 <NavLink
-                                    to="/dashboard/volunteers"
+                                    to="/dashboard/users"
                                     className={({ isActive }) =>
                                         `flex items-center gap-2 flex-nowrap text-nowrap leading-tight tracking-tight font-semibold rounded-badge ${isActive ? 'bg-pink-100 text-pink-600' : 'text-gray-700'
                                         }`

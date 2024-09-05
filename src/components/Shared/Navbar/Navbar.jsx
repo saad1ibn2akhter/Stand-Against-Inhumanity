@@ -1,11 +1,14 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Authprovider/AuthProvider";
 
 const Navbar = () => {
     const [isToggleOpen, setIsToggleOpen] = useState(false)
     const [isOpen, setIsOpen] = useState(false);
+    const {user} = useContext(AuthContext);
 
     const toggleDropdown = () => setIsOpen(!isOpen);
+
 
     return (
         <>
@@ -124,7 +127,7 @@ const Navbar = () => {
                                 <li role="none" className="relative flex lg:translate-y-7">
                                     <button
                                         onClick={toggleDropdown}
-                                        className="flex btn btn-sm bg-green-100 text-green-500 items-center transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none lg:px-4"
+                                        className="flex btn btn-sm bg-green-100 text-green-500 lg:ml-12 items-center transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none lg:px-4"
                                     >
                                         Account
                                     </button>
@@ -157,19 +160,16 @@ const Navbar = () => {
                                 {/*        <!-- Avatar --> */}
                                 <a
                                     href="#"
-                                    className="relative inline-flex h-10 w-10 items-center justify-center rounded-full text-white"
+                                    className="relative inline-flex  items-center justify-center  text-white"
                                 >
                                     <img
-                                        src="https://i.pravatar.cc/40?img=35"
+                                        src={user?.photoURL}
                                         alt="user name"
-                                        title="user name"
-                                        width="40"
-                                        height="40"
-                                        className="max-w-full rounded-full hidden md:block "
+                                        title={user?.displayName}
+                                       
+                                        className="w-[53px] h-[53px] rounded-full hidden md:block "
                                     />
-                                    <span className="absolute bottom-0 right-0 inline-flex items-center justify-center gap-1 rounded-full border-2 border-white bg-pink-500 p-1 text-sm text-white">
-                                        <span className="sr-only"> 7 new emails </span>
-                                    </span>
+                                   
                                 </a>
                                 {/*        <!-- End Avatar --> */}
                             </div>
