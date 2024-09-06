@@ -99,25 +99,19 @@ const Dashboard = () => {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to="/dashboard/manageScholarships" className="flex  rounded-badge items-center gap-2flex-nowrap text-nowrap">
-                                    <FaList /> Manage Scholarships
+                                <NavLink
+                                    to="/dashboard/blooddonors"
+                                    className={({ isActive }) =>
+                                        `flex items-center gap-2 flex-nowrap text-nowrap leading-tight tracking-tight font-semibold rounded-badge ${isActive ? 'bg-pink-100 text-pink-600' : 'text-gray-700'
+                                        }`
+                                    }
+                                >
+                                   <img width="30" height="30" src="https://img.icons8.com/bubbles/100/drop-of-blood.png" alt="drop-of-blood"/>
+                                    Blood Donors
                                 </NavLink>
                             </li>
-                            <li>
-                                <NavLink to="/dashboard/appliedscholarships" className=" rounded-badge flex items-center gap-2 flex-nowrap text-nowrap">
-                                    <FaBook /> Applied Applications
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/dashboard/users" className="flex items-center  rounded-badge gap-2 flex-nowrap text-nowrap">
-                                    <FaUsers /> Manage Users
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/dashboard/allReviews" className=" rounded-badge flex items-center gap-2 flex-nowrap text-nowrap">
-                                    <MdReviews /> Manage Reviews
-                                </NavLink>
-                            </li>
+                           
+                        
                         </>
                     )}
 

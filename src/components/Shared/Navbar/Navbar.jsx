@@ -67,21 +67,19 @@ const Navbar = () => {
                                     : "invisible opacity-0"
                                     }`}
                             >
-                                <li role="none" className="flex items-stretch">
-                                    <a
-                                        role="menuitem"
-                                        aria-haspopup="false"
-                                        className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
-                                        href="javascript:void(0)"
-                                    >
-                                        <span>Blog</span>
-                                    </a>
-                                </li>
+                                
                                 <li role="none" className="flex items-stretch">
                                     <Link
                                         to={`/bloodbank`}
                                         className="flex items-center py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4">
                                         <span>Blood bank</span>
+                                    </Link>
+                                </li>
+                                <li role="none" className="flex items-stretch">
+                                    <Link
+                                        to={`/blogs`}
+                                        className="flex items-center py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4">
+                                        <span>Blogs</span>
                                     </Link>
                                 </li>
                                 <li role="none" className="flex items-stretch">

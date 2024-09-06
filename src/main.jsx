@@ -25,6 +25,9 @@ import AllApplications from './components/Dashboard/AllApplications.jsx';
 import AuthProvider from './components/Authprovider/AuthProvider.jsx';
 import Register from './components/Authentication/Register.jsx';
 import Users from './components/Dashboard/Users.jsx';
+import VerifiedMembers from './components/Dashboard/VerifiedMembers.jsx';
+import { Blogs } from './components/Allblogs/Blogs.jsx';
+import BlogDetails from './components/Allblogs/BlogDetails.jsx';
 
 
 const router = createBrowserRouter([
@@ -65,6 +68,14 @@ const router = createBrowserRouter([
         element: <Donate></Donate>
       },
       {
+        path: '/blogs',
+        element: <Blogs></Blogs>
+      },
+      {
+        path: '/blogdetails',
+        element: <BlogDetails></BlogDetails>
+      },
+      {
         path: '/payment',
         element: <Payment></Payment>
       },
@@ -100,6 +111,10 @@ const router = createBrowserRouter([
           {
             path: 'users',
             element: <Users></Users>
+          },
+          {
+            path: 'volunteers',
+            element: <VerifiedMembers></VerifiedMembers>
           },
 
         ],
