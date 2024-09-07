@@ -19,7 +19,7 @@ const Dashboard = () => {
             <div className="w-full md:w-64  bg-lines  text-black border-2 rounded-e-badge">
                 <div>
                     <Link to='/' className="flex justify-center">
-                      a  <img width="80" height="80" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/100/external-defence-martial-arts-flaticons-lineal-color-flat-icons.png" alt="external-defence-martial-arts-flaticons-lineal-color-flat-icons" />
+                      <img width="80" height="80" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/100/external-defence-martial-arts-flaticons-lineal-color-flat-icons.png" alt="external-defence-martial-arts-flaticons-lineal-color-flat-icons" />
 
                     </Link>
                 </div>
@@ -108,6 +108,18 @@ const Dashboard = () => {
                                 >
                                    <img width="30" height="30" src="https://img.icons8.com/bubbles/100/drop-of-blood.png" alt="drop-of-blood"/>
                                     Blood Donors
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    to="/dashboard/createblogs"
+                                    className={({ isActive }) =>
+                                        `flex items-center gap-2 flex-nowrap text-nowrap leading-tight tracking-tight font-semibold rounded-badge ${isActive ? 'bg-pink-100 text-pink-600' : 'text-gray-700'
+                                        }`
+                                    }
+                                >
+                                   <img width="30" height="30" src="https://img.icons8.com/external-wanicon-two-tone-wanicon/64/external-blogs-digital-content-wanicon-two-tone-wanicon.png" alt="external-blogs-digital-content-wanicon-two-tone-wanicon"/>
+                                    Create Blogs
                                 </NavLink>
                             </li>
                            

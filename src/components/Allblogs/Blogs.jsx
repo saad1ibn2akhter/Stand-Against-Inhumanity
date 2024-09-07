@@ -171,7 +171,7 @@ export const Blogs = () => {
                             <p className="text-2xl font-bold leading-5">Conquer the World</p>
                         </a>
                         <p className="mb-4 text-gray-700">
-                            Sed ut perspiciatis unde omnis iste natus error sit sed quia
+                            Sed aut perspiciatis unde omnis iste natus error sit sed quia
                             consequuntur magni voluptatem doloremque.
                         </p>
                         <div className="flex space-x-4">

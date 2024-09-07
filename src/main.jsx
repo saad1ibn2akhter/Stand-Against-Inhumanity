@@ -28,6 +28,7 @@ import Users from './components/Dashboard/Users.jsx';
 import VerifiedMembers from './components/Dashboard/VerifiedMembers.jsx';
 import { Blogs } from './components/Allblogs/Blogs.jsx';
 import BlogDetails from './components/Allblogs/BlogDetails.jsx';
+import Createblogs from './components/Allblogs/Createblogs/Createblogs.jsx';
 
 
 const router = createBrowserRouter([
@@ -115,6 +116,10 @@ const router = createBrowserRouter([
           {
             path: 'volunteers',
             element: <VerifiedMembers></VerifiedMembers>
+          },
+          {
+            path: 'createblogs',
+            element: <Createblogs>d</Createblogs>
           },
 
         ],
