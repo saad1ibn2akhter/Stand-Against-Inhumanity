@@ -9,7 +9,8 @@ export default {
       fontFamily:{
        'logoFont': ['"Playwrite MX"', 'cursive'],
       //  'poppins': ['"Poppins"', 'sans-serif'],
-      'poppins':"'Poppins',serif"
+      'poppins':"'Poppins',serif",
+      'mons':"'Montserrat',serif"
       },
       boxShadow: {
         'text-violet': '2px 2px 5px rgba(138, 43, 226, 0.5)', // Customize the shadow here

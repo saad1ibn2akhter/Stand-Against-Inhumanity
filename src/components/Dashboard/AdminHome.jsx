@@ -3,9 +3,43 @@ import { FaDollarSign, FaPoundSign, FaUser } from 'react-icons/fa';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Sector } from 'recharts';
 import { MdDescription } from 'react-icons/md';
 import { FaGoogleScholar } from 'react-icons/fa6';
+import useAxiosPublic from '../hooks/useAxiosPublic';
 
 
 const AdminHome = () => {
+
+    const [donations, setDoantions] = useState(1000);
+    const [users, setUser] = useState([]);
+    const [blood, setBlood] = useState([]);
+    const [volunteer, setVolunteer] = useState([]);
+    const [blogs, setBlogs] = useState([]);
+
+    const axiosPublic = useAxiosPublic();
+
+    useEffect(() => {
+
+        axiosPublic.get('/users')
+            .then(res => {
+                setUser(res.data)
+            })
+        axiosPublic.get('/blooddonations')
+            .then(res => {
+                setBlood(res.data)
+            })
+        axiosPublic.get('/volunteers')
+            .then(res => {
+
+                setVolunteer(res.data)
+            })
+        axiosPublic.get('/blogs')
+            .then(res => {
+                setBlogs(res.data)
+            })
+
+
+    }, [])
+
+
 
     const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
     const data2 = [
@@ -18,27 +52,27 @@ const AdminHome = () => {
     const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
     const data = [
         {
-            name: 'Users',
             uv: 1000,
-            Dashboard: 5,
+            uv: users.length,
+            Dashboard: users.length,
             amt: 2400,
         },
         {
-            name: 'Applications',
+            name: 'Articles',
             uv: 1000,
-            Dashboard: 4,
+            Dashboard: blogs.length,
             amt: 2210,
         },
         {
-            name: 'Reviews',
-            uv: 1933,
-            Dashboard: 7,
+            name: 'Volunteers',
+            uv: 1000,
+            Dashboard: volunteer.length,
             amt: 2290,
         },
         {
-            name: 'Scholarships',
-            uv: 4545,
-            Dashboard: 8,
+            name: 'Blood Banks',
+            uv: 1000,
+            Dashboard: blood.length,
             amt: 2000,
         },
 
@@ -70,8 +104,8 @@ const AdminHome = () => {
         return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
     };
     return (
-        <div className='flex flex-col lg:flex-row justify-between items-start'>
-            <div className='w-[70%]'>
+        <div className='flex flex-col lg:flex-row justify-between items-start bg-lines bg-cover'>
+            <div className='w-full'>
                 <div className='flex justify-center mx-auto'>
                     <div className="stats flex flex-col items-center justify-center mx-auto md:flex-row shadow mb-8 w-[360px] lg:w-full overflow-hidden">
                         <div className="stat">
@@ -79,16 +113,25 @@ const AdminHome = () => {
                                 <FaUser className='text-violet-600 w-[30px] h-[30px]' ></FaUser>
                             </div>
                             <div className="stat-title">Registered users</div>
-                            <div className="stat-value">5</div>
+                            <div className="stat-value">{users.length}</div>
                             <div className="stat-desc">Jan 1st - Sept 1st</div>
                         </div>
+                        <div className="stat">
+                            <div className="stat-figure text-secondary">
+                                <FaUser className='text-violet-600 w-[30px] h-[30px]' ></FaUser>
+                            </div>
+                            <div className="stat-title">Volunteers</div>
+                            <div className="stat-value">{volunteer.length}</div>
+                            <div className="stat-desc">Jan 1st - Sept 1st</div>
+                        </div>
+                    
 
                         <div className="stat">
                             <div className="stat-figure text-secondary">
                                 <FaPoundSign className='text-violet-600 w-[30px] h-[30px]' ></FaPoundSign>
                             </div>
-                            <div className="stat-title">Total Transaction</div>
-                            <div className="stat-value">500</div>
+                            <div className="stat-title">Total Donations</div>
+                            <div className="stat-value">{donations}</div>
                             <div className="stat-desc">↗︎ 400 (22%)</div>
                         </div>
 
@@ -96,16 +139,16 @@ const AdminHome = () => {
                             <div className="stat-figure text-secondary">
                                 <MdDescription className='text-violet-600 w-[30px] h-[30px]' ></MdDescription>
                             </div>
-                            <div className="stat-title">Total Applications</div>
-                            <div className="stat-value">6</div>
+                            <div className="stat-title">Blood Sample</div>
+                            <div className="stat-value">{blood.length}</div>
                             <div className="stat-desc">↘︎ 9 (14%)</div>
                         </div>
                         <div className="stat">
                             <div className="stat-figure text-secondary">
                                 <FaGoogleScholar className='text-violet-600 w-[30px] h-[30px]' ></FaGoogleScholar>
                             </div>
-                            <div className="stat-title">Scholarships</div>
-                            <div className="stat-value">6</div>
+                            <div className="stat-title">Articles</div>
+                            <div className="stat-value">{blogs.length}</div>
                             <div className="stat-desc">↘︎ 3 (14%)</div>
                         </div>
                     </div>
@@ -191,7 +234,7 @@ const AdminHome = () => {
                 </div>
 
             </div>
-            <div className='w-[30%]  p-3'>
+            {/* <div className='w-[30%]  p-3'>
                 <div>
                     <div>
                         <h1 className='text-2xl font-medium text-center'>Recent Payments</h1>
@@ -217,16 +260,8 @@ const AdminHome = () => {
                         <th>Amount</th>
                         <th>Email Address</th>
                         <tbody className=''>
-                            {/* 
-                            {
-                                info.slice(0, 5).map((inf, index) => <>
-                                    <tr className='border-2' key={index}>
-                                        <td>{index + 1} <span className='text-red-400 font-bold text-[20px]'>{' . '}</span> $ {inf.price}</td>
-                                        <td>{inf?.email}</td>
-                                    </tr>
-
-                                </>)
-                            } */}
+ 
+                            
                             <tr className='border-2' >
                                 <td> <span className='text-red-400 font-bold text-[20px]'>{' . '}</span> $ 400</td>
                                 <td>saad.e.alfi340@gmail.com</td>
@@ -257,7 +292,7 @@ const AdminHome = () => {
                         </tbody>
                     </table>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeroSection = () => {
     return (
-        <div className='max-w-7xl mx-auto font-poppins'>
+        <div className='max-w-7xl mx-auto font-mons'>
             <div className='flex justify-between items-center mb-20'>
                 <div className='w-1/2 space-y-6'>
                     <h1 className='badge bg-orange-100 text-orange-400 '>Education Support</h1>

@@ -29,6 +29,8 @@ import VerifiedMembers from './components/Dashboard/VerifiedMembers.jsx';
 import { Blogs } from './components/Allblogs/Blogs.jsx';
 import BlogDetails from './components/Allblogs/BlogDetails.jsx';
 import Createblogs from './components/Allblogs/Createblogs/Createblogs.jsx';
+import BloodDonors from './components/Dashboard/BloodDonors.jsx';
+import Login from './components/Authentication/Login.jsx';
 
 
 const router = createBrowserRouter([
@@ -73,7 +75,7 @@ const router = createBrowserRouter([
         element: <Blogs></Blogs>
       },
       {
-        path: '/blogdetails',
+        path: '/blogdetails/:id',
         element: <BlogDetails></BlogDetails>
       },
       {
@@ -85,6 +87,10 @@ const router = createBrowserRouter([
         element: <Register></Register>
       },
       {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
         path: '/member',
         element: <MemberDetails></MemberDetails>
       },
@@ -93,7 +99,7 @@ const router = createBrowserRouter([
         element: <VolunteerRegistration></VolunteerRegistration>
       },
       {
-        path: `/bloodbank/needblood/:id`,
+        path: `/bloodbank/needblood/:district`,
         element: <DistrictDetails></DistrictDetails>,
 
       },
@@ -120,6 +126,10 @@ const router = createBrowserRouter([
           {
             path: 'createblogs',
             element: <Createblogs>d</Createblogs>
+          },
+          {
+            path: 'blooddonors',
+            element: <BloodDonors></BloodDonors>
           },
 
         ],

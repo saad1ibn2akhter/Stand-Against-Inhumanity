@@ -15,7 +15,7 @@ const Payment = () => {
 
                 const redirectUrl = res.data?.paymentUrl;
 
-                if(redirectUrl){
+                if (redirectUrl) {
                     window.location.replace(redirectUrl);
                 }
             })
@@ -26,7 +26,7 @@ const Payment = () => {
 
     return (
         <div>
-            <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
+            <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16 font-mons">
                 <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
                     <div class="mx-auto max-w-5xl">
                         <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Payment</h2>
@@ -100,28 +100,28 @@ const Payment = () => {
                                     <div class="space-y-2">
                                         <dl class="flex items-center justify-between gap-4">
                                             <dt class="text-base font-normal text-gray-500 dark:text-gray-400">Original price</dt>
-                                            <dd class="text-base font-medium text-gray-900 dark:text-white">$6,592.00</dd>
+                                            <dd class="text-base font-medium text-gray-900 dark:text-white">0.0</dd>
                                         </dl>
 
                                         <dl class="flex items-center justify-between gap-4">
                                             <dt class="text-base font-normal text-gray-500 dark:text-gray-400">Savings</dt>
-                                            <dd class="text-base font-medium text-green-500">-$299.00</dd>
+                                            <dd class="text-base font-medium text-green-500">-0.0</dd>
                                         </dl>
 
                                         <dl class="flex items-center justify-between gap-4">
                                             <dt class="text-base font-normal text-gray-500 dark:text-gray-400">Store Pickup</dt>
-                                            <dd class="text-base font-medium text-gray-900 dark:text-white">$99</dd>
+                                            <dd class="text-base font-medium text-gray-900 dark:text-white">-0.0</dd>
                                         </dl>
 
                                         <dl class="flex items-center justify-between gap-4">
                                             <dt class="text-base font-normal text-gray-500 dark:text-gray-400">Tax</dt>
-                                            <dd class="text-base font-medium text-gray-900 dark:text-white">$799</dd>
+                                            <dd class="text-base font-medium text-gray-900 dark:text-white">0.0</dd>
                                         </dl>
                                     </div>
 
                                     <dl class="flex items-center justify-between gap-4 border-t border-gray-200 pt-2 dark:border-gray-700">
                                         <dt class="text-base font-bold text-gray-900 dark:text-white">Total</dt>
-                                        <dd class="text-base font-bold text-gray-900 dark:text-white">$7,191.00</dd>
+                                        <dd class="text-base font-bold text-gray-900 dark:text-white">0.0</dd>
                                     </dl>
                                 </div>
 
@@ -133,11 +133,20 @@ const Payment = () => {
                                     <img class="h-8 w-auto dark:hidden" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/brand-logos/mastercard.svg" alt="" />
                                     <img class="hidden h-8 w-auto dark:flex" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/brand-logos/mastercard-dark.svg" alt="" />
                                 </div>
+                                <div className='flex space-x-3 items-center justify-center'>
+                                    <img className='w-[100px]' src="https://i.pinimg.com/564x/6d/90/4c/6d904c96e56613214a1174f7ccf92cd3.jpg" alt="" />
+                                    <h1 className='font-bold'>+123 456 7891</h1>
+                                </div>
+                                <div className='flex space-x-3 items-center justify-center'>
+                                    <img className='w-[100px]' src="https://i.pinimg.com/564x/a8/f1/f6/a8f1f68c750afdb0a1061078902d4038.jpg" alt="" />
+                                    <h1 className='font-bold'>+123 456 7891</h1>
+                                </div>
+                                
                             </div>
                         </div>
 
                         <p class="mt-6 text-center text-gray-500 dark:text-gray-400 sm:mt-8 lg:text-left">
-                            Payment processed by <a href="#" title="" class="font-medium text-primary-700 underline hover:no-underline dark:text-primary-500">Paddle</a> for <a href="#" title="" class="font-medium text-primary-700 underline hover:no-underline dark:text-primary-500">Stand Against Inhumanity</a>
+                            Payment processed<a href="#" title="" class="font-medium text-primary-700 underline hover:no-underline dark:text-primary-500"></a> for <a href="#" title="" class="font-medium text-primary-700 underline hover:no-underline dark:text-primary-500">Stand Against Inhumanity</a>
                             - Bangladesh
                         </p>
                     </div>

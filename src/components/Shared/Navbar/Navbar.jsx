@@ -12,12 +12,12 @@ const Navbar = () => {
 
     return (
         <>
-            <div className=" font-poppins top-0 sticky z-50 shadow-lg shadow-slate-700/5 bg-white/90 ">
+            <div className=" font-mons top-0 sticky z-50 shadow-lg shadow-slate-700/5 bg-white/90 ">
                 <header className=" max-w-8xl mx-auto border-b-1 relative z-20 w-full border-b border-slate-200 bg-white/90  after:absolute after:left-0 after:top-full after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden">
                     <div className="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
                         <nav
                             aria-label="main navigation"
-                            className="flex h-[5.5rem] items-stretch justify-between font-medium text-slate-700"
+                            className="flex h-[5.5rem] items-stretch text-[14.5px] justify-between font-medium text-slate-700"
                             role="navigation"
                         >
                             {/*      <!-- Brand logo --> */}
@@ -71,28 +71,35 @@ const Navbar = () => {
                                 <li role="none" className="flex items-stretch">
                                     <Link
                                         to={`/bloodbank`}
-                                        className="flex items-center py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4">
+                                        className="flex items-center py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-2">
                                         <span>Blood bank</span>
                                     </Link>
                                 </li>
                                 <li role="none" className="flex items-stretch">
                                     <Link
+                                        to={`/bloodbank`}
+                                        className="flex items-center py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-2">
+                                        <span>Advisors</span>
+                                    </Link>
+                                </li>
+                                <li role="none" className="flex items-stretch">
+                                    <Link
                                         to={`/blogs`}
-                                        className="flex items-center py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4">
+                                        className="flex items-center py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-2">
                                         <span>Blogs</span>
                                     </Link>
                                 </li>
                                 <li role="none" className="flex items-stretch">
                                     <Link
                                         to={`/volunteer`}
-                                        className="flex items-center py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4">
+                                        className="flex items-center py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-2">
                                         <span>Volunteer</span>
                                     </Link>
                                 </li>
                                 <li role="none" className="flex items-stretch">
                                     <Link
                                         to={`/donate`}
-                                        className="flex items-center py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4">
+                                        className="flex items-center py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-2">
                                         <span>Donate</span>
                                     </Link>
                                 </li>
@@ -103,19 +110,19 @@ const Navbar = () => {
                                     <a
                                         role="menuitem"
                                         aria-haspopup="false"
-                                        className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
+                                        className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-2"
                                         href="javascript:void(0)"
                                     >
                                         <span>About Us</span>
                                     </a>
 
                                 </Link>
-                                <Link to='/dashboard' className="flex items-stretch">
+                                <Link to='dashboard/adminHome' className="flex items-stretch">
 
                                     <a
                                         role="menuitem"
                                         aria-haspopup="false"
-                                        className="flex items-center gap-2 py-4 transition-colors duration-300  hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
+                                        className="flex items-center gap-2 py-4 transition-colors duration-300  hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-2"
                                         href="javascript:void(0)"
                                     >
                                         <span>Dashboard</span>
@@ -125,7 +132,7 @@ const Navbar = () => {
                                 <li role="none" className="relative flex lg:translate-y-7">
                                     <button
                                         onClick={toggleDropdown}
-                                        className="flex btn btn-sm bg-green-100 text-green-500 lg:ml-12 items-center transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none lg:px-4"
+                                        className="flex btn btn-sm bg-green-100 text-green-500 lg:ml-12 items-center transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none lg:px-2"
                                     >
                                         Account
                                     </button>

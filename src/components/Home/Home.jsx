@@ -8,16 +8,20 @@ import { Content } from './Content';
 import { Blog } from './Blog';
 import { Newsletter } from './Newsletter';
 import Testimonial from './Testimonial';
+import { Faq } from './Faq';
+import Marqee from './Marqee';
 
 const Home = () => {
     return (
-        <div>
+        <div className='font-mons space-y-[150px]'>
             <Banner></Banner>
+            <Marqee></Marqee>
             <Feature></Feature>
             <HeroSection></HeroSection>
             <Volunteer></Volunteer>
-            <Content></Content>
+            {/* <Content></Content> */}
             <Blog></Blog>
+            <Faq></Faq>
             <Team></Team>
             <Testimonial></Testimonial>
             <Newsletter></Newsletter>

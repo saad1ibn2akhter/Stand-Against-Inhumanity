@@ -14,7 +14,7 @@ const Dashboard = () => {
 
 
     return (
-        <div className="flex flex-col md:flex-row min-h-screen flex-nowrap font-poppins">
+        <div className="flex flex-col md:flex-row min-h-screen flex-nowrap font-mons">
 
             <div className="w-full md:w-64  bg-lines  text-black border-2 rounded-e-badge">
                 <div>

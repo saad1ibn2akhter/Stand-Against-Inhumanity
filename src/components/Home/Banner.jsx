@@ -5,20 +5,20 @@ import { FaRightFromBracket } from 'react-icons/fa6';
 const Banner = () => {
     return (
         <div className='bg-gray-100 bg-banner bg-blend-multiply bg-opacity-70 bg-no-repeat  w-full'>
-            <div className='max-w-7xl mx-auto font-poppins'>
+            <div className='max-w-7xl mx-auto font-mons'>
                 <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-7xl md:px-18 lg:px-8 lg:py-20">
                     <div className="grid gap-10 lg:grid-cols-2">
                         {/* Text Section */}
                         <div className="flex flex-col justify-center md:pr-8 xl:pr-0 space-y-6">
 
                             <div className=" mb-6">
-                                <h2 className="mb-6 leading-tight tracking-tighter text-[60px] font-semibold text-gray-900  ">
-                                    Empower <span className='capitalize p-2 text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-800'>hope</span> <br />
-                                    change lives today
+                                <h2 className="mb-6 leading-tight tracking-tighter text-[54px] font-semibold text-gray-900  ">
+                                    Serving <span className='capitalize p-2 text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-800'>Humanity</span> <br />
+                                    to change the world
 
                                 </h2>
-                                <p className="text-base text-gray-700 md:text-lg">
-                                    Shape a brighter future and building a better world with our impactful NGO initiatives.
+                                <p className="text-base text-gray-700 md:text-lg mb-3">
+                                    Shape a brighter future and build a better world with our impactful volunteery initiatives.
                                 </p>
 
                                 <div className='flex  items-center my-3 space-x-5'>
@@ -31,17 +31,17 @@ const Banner = () => {
                                 </div>
                             </div>
                             <div className='-translate-y-6 flex space-x-5 items-center'>
-                                <div className='flex space-x-3 items-center'>
+                                <div className='flex space-x-3 items-center  text-nowrap '>
                                     <img width="40" height="40" src="https://img.icons8.com/color/100/checked-2--v1.png" alt="checked-2--v1" />
-                                    <h1>Free Education</h1>
+                                    <h1>Fund Raising</h1>
                                 </div>
-                                <div className='flex space-x-3 items-center'>
+                                <div className='flex space-x-3 items-center  text-nowrap'>
                                     <img width="40" height="40" src="https://img.icons8.com/color/100/checked-2--v1.png" alt="checked-2--v1" />
-                                    <h1>Free Education</h1>
+                                    <h1>Relief providing</h1>
                                 </div>
-                                <div className='flex space-x-3 items-center'>
+                                <div className='flex space-x-3 items-center  text-nowrap'>
                                     <img width="40" height="40" src="https://img.icons8.com/color/100/checked-2--v1.png" alt="checked-2--v1" />
-                                    <h1>Free Education</h1>
+                                    <h1>Financial Support</h1>
                                 </div>
                             </div>
                         </div>
