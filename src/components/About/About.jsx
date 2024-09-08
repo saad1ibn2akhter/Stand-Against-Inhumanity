@@ -10,7 +10,7 @@ const About = () => {
                         <img width="100" height="100" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/100/external-defence-martial-arts-flaticons-lineal-color-flat-icons.png" alt="external-defence-martial-arts-flaticons-lineal-color-flat-icons" />
                         <div className=" ">
                             <h1 className="leading-tight tracking-tighter text-gray-400">Stand Against <span className="text-red-700 font-bold leading-tight tracking-tighter">Inhumanity</span></h1>
-                            <h1 className="text-[13px] text-gray-500 ">Empowering youth for better <span className="text-green-600">Ban</span><span className="text-red-600">glad</span><span className="text-green-600">desh</span></h1>
+                            <h1 className="text-[13px] text-gray-500 ">United For A Better Bangladesh <span className="text-green-600">Ban</span><span className="text-red-600">glad</span><span className="text-green-600">desh</span></h1>
                         </div>
                     </div>
                 </Link>
